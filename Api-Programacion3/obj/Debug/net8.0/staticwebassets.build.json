@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "gRxwkp/QuH+Xkew37m8C0qXSMqvH/OlYRwzEJXyl6uM=",
+  "Hash": "P+VMrwS8bcSobY/J3/dxhIzonxTLb4wPDUkVbh0kzOY=",
   "Source": "Api-Programacion3",
   "BasePath": "_content/Api-Programacion3",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

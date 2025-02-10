@@ -17,3 +17,4 @@ C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Infrastructure\ob
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json

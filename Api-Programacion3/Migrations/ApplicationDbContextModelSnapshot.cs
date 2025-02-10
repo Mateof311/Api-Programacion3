@@ -31,7 +31,7 @@ namespace Api_Programacion3.Migrations
                     b.HasIndex("ClientId")
                         .IsUnique();
 
-                    b.ToTable("Cart");
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("Domain.Entities.Client", b =>
@@ -90,7 +90,7 @@ namespace Api_Programacion3.Migrations
 
                     b.HasIndex("CartId");
 
-                    b.ToTable("Item");
+                    b.ToTable("Items");
                 });
 
             modelBuilder.Entity("Domain.Entities.Product", b =>
@@ -121,7 +121,7 @@ namespace Api_Programacion3.Migrations
             modelBuilder.Entity("Domain.Entities.Cart", b =>
                 {
                     b.HasOne("Domain.Entities.Client", null)
-                        .WithOne("cart")
+                        .WithOne("Cart")
                         .HasForeignKey("Domain.Entities.Cart", "ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -141,7 +141,7 @@ namespace Api_Programacion3.Migrations
 
             modelBuilder.Entity("Domain.Entities.Client", b =>
                 {
-                    b.Navigation("cart")
+                    b.Navigation("Cart")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

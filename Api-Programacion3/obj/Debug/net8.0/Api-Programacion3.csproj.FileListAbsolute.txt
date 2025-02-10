@@ -137,3 +137,8 @@ C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Api-Programacion3.staticwebassets.endpoints.json
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\obj\Debug\net8.0\Api-Programacion3.sourcelink.json
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\obj\Debug\net8.0\staticwebassets\msbuild.Api-Programacion3.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

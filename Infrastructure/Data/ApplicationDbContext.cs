@@ -13,6 +13,8 @@ namespace Infrastructure.Data
         private readonly bool isTestingEnvironment;
         public DbSet<Client> Clients { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Cart> Carts { get; set; }
 
 
 

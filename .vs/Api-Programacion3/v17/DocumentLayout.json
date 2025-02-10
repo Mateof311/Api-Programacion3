@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE618E74-502C-46B7-B253-6326119053EC}|Application\\Application.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE618E74-502C-46B7-B253-6326119053EC}|Application\\Application.csproj|solutionrelative:application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69461DCF-EA84-4D86-BE8A-EA46D8B8D9EE}|Infrastructure\\Infrastructure.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\infrastructure\\data\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69461DCF-EA84-4D86-BE8A-EA46D8B8D9EE}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Api-Programacion3\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Api-Programacion3\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Infrastructure\\Data\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Infrastructure\\Data\\ProductRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\ProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T19:20:43.389Z",
+              "WhenOpened": "2025-02-08T14:18:39.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Program.cs",
+              "RelativeDocumentMoniker": "Api-Programacion3\\Program.cs",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Program.cs",
+              "RelativeToolTip": "Api-Programacion3\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T14:14:26.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "Application\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T14:13:54.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "Api-Programacion3\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "Api-Programacion3\\Controllers\\ClientController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA5wCoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T13:57:02.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Api-Programacion3\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Api-Programacion3\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T13:56:28.308Z",
               "EditorCaption": ""
             }
           ]
