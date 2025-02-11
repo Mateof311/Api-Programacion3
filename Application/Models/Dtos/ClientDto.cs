@@ -9,11 +9,16 @@ namespace Application.Models.Dtos
 {
     public class ClientDto
     {
+        [Required]
         public string Name { get; set; }
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
+        [Required]
         public string Password { get; set; }
+        [Required]
         public string Location { get; set; }
+        [Required]
         public int Dni { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace Infrastructure.Data
         {
             return _dbContext.Clients.FirstOrDefault(u => u.Id == id);
         }
-        public User? GetClient(string email, string password)
+        public Client? GetClient(string email, string password)
         {
             return _dbContext.Clients.FirstOrDefault(x => x.Email == email && x.Password == password);
         }

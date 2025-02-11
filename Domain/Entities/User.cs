@@ -18,5 +18,6 @@ namespace Domain.Entities
         public string Password { get; set; }
         public string Location { get; set; }
         public int Dni { get; set; }
+        public string UserRol {  get; set; }
     }
 }

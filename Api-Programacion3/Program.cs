@@ -15,11 +15,12 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IProductService,  ProductService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
 
 
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-
+builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(

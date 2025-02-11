@@ -24,7 +24,7 @@ namespace Application.Services
             return _clientRepository.GetClientById(id);
         }
 
-        public User? GetClient(string email, string password)
+        public Client? GetClient(string email, string password)
         {
             return _clientRepository.GetClient(email, password);
         }
@@ -42,6 +42,7 @@ namespace Application.Services
                 Password = clientDto.Password,
                 Location = clientDto.Location,
                 Dni = clientDto.Dni,
+                UserRol = "Client",
                 Cart = new Cart(),
             };
             return _clientRepository.AddClient(newClient);

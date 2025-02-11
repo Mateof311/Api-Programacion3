@@ -10,7 +10,7 @@ namespace Domain.Interfaces
     public interface IClientRepository
     {
         public Client? GetClientById(int id);
-        public User? GetClient(string email, string password);
+        public Client? GetClient(string email, string password);
         public List<Client> GetClients();
         public int AddClient(Client client);
         public void UpdateClient(int id, Client client);

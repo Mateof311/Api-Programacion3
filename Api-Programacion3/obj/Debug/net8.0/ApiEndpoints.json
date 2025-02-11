@@ -1,5 +1,84 @@
 [
   {
+    "ContainingType": "Api_Programacion3.Controllers.AdminController",
+    "Method": "AddAmin",
+    "RelativePath": "api/Admin/AddAmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adminDto",
+        "Type": "Application.Models.Dtos.AdminDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.AdminController",
+    "Method": "DeleteAdmin",
+    "RelativePath": "api/Admin/DeleteAdmin",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.AdminController",
+    "Method": "GetAdmin",
+    "RelativePath": "api/Admin/GetAdmin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.AdminController",
+    "Method": "GetAll",
+    "RelativePath": "api/Admin/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.AdminController",
+    "Method": "UpdateAdmin",
+    "RelativePath": "api/Admin/UpdateAdmin",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "adminDto",
+        "Type": "Application.Models.Dtos.AdminDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Api_Programacion3.Controllers.ClientController",
     "Method": "AddClient",
     "RelativePath": "api/Client/AddClient",

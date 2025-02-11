@@ -12,7 +12,7 @@ namespace Application.Interfaces
     public interface IClientService
     {
         public Client? GetClientById(int id);
-        public User? GetClient(string email, string password);
+        public Client? GetClient(string email, string password);
         public List<Client> GetClients();
         public int AddClient(ClientDto clientDto);
         public void UpdateClient(int id, ClientDto clientDto);
