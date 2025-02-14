@@ -179,6 +179,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Api_Programacion3.Controllers.ItemController",
+    "Method": "AddItem",
+    "RelativePath": "api/Item/AddItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemDto",
+        "Type": "Application.Models.Dtos.ItemDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.ItemController",
+    "Method": "DeleteItem",
+    "RelativePath": "api/Item/DeleteItem",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.ItemController",
+    "Method": "GetAllItems",
+    "RelativePath": "api/Item/GetAllItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.ItemController",
+    "Method": "GetItemById",
+    "RelativePath": "api/Item/GetItemById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.ItemController",
+    "Method": "UpdateItem",
+    "RelativePath": "api/Item/UpdateItem",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "quantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Api_Programacion3.Controllers.ProductController",
     "Method": "AddProduct",
     "RelativePath": "api/Product/AddProduct",

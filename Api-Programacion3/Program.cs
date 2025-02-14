@@ -13,15 +13,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IClientService, ClientService>();
-builder.Services.AddScoped<IProductService,  ProductService>();
-builder.Services.AddScoped<IAdminService, AdminService>();
-
-
+//repositories
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
+builder.Services.AddScoped<IItemRepository, ItemRepository>();
 
+//services
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IProductService,  ProductService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IItemService, ItemService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(
 builder.Configuration["ConnectionStrings:MayoristaDBConnectionString"], b => b.MigrationsAssembly("Api-Programacion3")));
