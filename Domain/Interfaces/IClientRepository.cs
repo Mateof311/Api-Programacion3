@@ -13,6 +13,7 @@ namespace Domain.Interfaces
         public Client? GetClient(string email, string password);
         public List<Client> GetClients();
         public int AddClient(Client client);
+        public void AddCartToClient(int id, Cart cart);
         public void UpdateClient(int id, Client client);
         public void DeleteClient(int id);
     }

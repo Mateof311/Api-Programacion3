@@ -38,6 +38,16 @@ namespace Infrastructure.Data
 
             return client.Id;
         }
+        public void AddCartToClient (int id, Cart cart)
+        {
+            var existingClient = _dbContext.Clients.FirstOrDefault(u => u.Id == id);
+            if (existingClient != null) 
+            { 
+                existingClient.CartId = cart.Id;
+                _dbContext.SaveChanges();
+            }
+            
+        }
 
         public void UpdateClient(int id, Client client)
         {

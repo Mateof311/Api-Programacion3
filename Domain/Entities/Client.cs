@@ -8,6 +8,6 @@ namespace Domain.Entities
 {
     public class Client : User
     {
-        public Cart Cart { get; set; }
+        public int CartId { get; set; }
     }
 }

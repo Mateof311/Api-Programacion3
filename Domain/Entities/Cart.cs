@@ -15,6 +15,7 @@ namespace Domain.Entities
         public int Id { get; set; }
         public int ClientId { get; set; }
         public List<Item> Products { get; set; } = new List<Item>();
+        public bool Delivery { get; set; }
         public decimal TotalAmount => Products?.Sum(d => d.Total) ?? 0;
 
     }

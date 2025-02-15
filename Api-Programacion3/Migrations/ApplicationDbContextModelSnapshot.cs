@@ -60,10 +60,10 @@ namespace Api_Programacion3.Migrations
                     b.Property<int>("ClientId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.Property<bool>("Delivery")
+                        .HasColumnType("INTEGER");
 
-                    b.HasIndex("ClientId")
-                        .IsUnique();
+                    b.HasKey("Id");
 
                     b.ToTable("Carts");
                 });
@@ -72,6 +72,9 @@ namespace Api_Programacion3.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CartId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Dni")
@@ -115,7 +118,6 @@ namespace Api_Programacion3.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ProductName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Quantity")
@@ -190,15 +192,6 @@ namespace Api_Programacion3.Migrations
                     b.ToTable("SysAdmins");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Cart", b =>
-                {
-                    b.HasOne("Domain.Entities.Client", null)
-                        .WithOne("Cart")
-                        .HasForeignKey("Domain.Entities.Cart", "ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Domain.Entities.Item", b =>
                 {
                     b.HasOne("Domain.Entities.Cart", null)
@@ -209,12 +202,6 @@ namespace Api_Programacion3.Migrations
             modelBuilder.Entity("Domain.Entities.Cart", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Client", b =>
-                {
-                    b.Navigation("Cart")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

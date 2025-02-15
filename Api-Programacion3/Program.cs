@@ -18,12 +18,14 @@ builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
 
 //services
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IProductService,  ProductService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IItemService, ItemService>();
+builder.Services.AddScoped<ICartService, CartService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(
 builder.Configuration["ConnectionStrings:MayoristaDBConnectionString"], b => b.MigrationsAssembly("Api-Programacion3")));

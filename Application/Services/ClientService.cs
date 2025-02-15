@@ -13,10 +13,11 @@ namespace Application.Services
     public class ClientService :IClientService
     {
         private readonly IClientRepository _clientRepository;
-
+        
         public ClientService (IClientRepository clientRepository)
         {
             _clientRepository = clientRepository;
+           
         }
 
         public Client? GetClientById(int id)
@@ -34,7 +35,7 @@ namespace Application.Services
             return _clientRepository.GetClients();
         }
         public int AddClient(ClientDto clientDto)
-        {
+        {            
             var newClient = new Client()
             {
                 Name = clientDto.Name,
@@ -43,7 +44,6 @@ namespace Application.Services
                 Location = clientDto.Location,
                 Dni = clientDto.Dni,
                 UserRol = "Client",
-                Cart = new Cart(),
             };
             return _clientRepository.AddClient(newClient);
         }
