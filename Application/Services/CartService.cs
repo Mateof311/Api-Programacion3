@@ -45,6 +45,10 @@ namespace Application.Services
             return response;
 
         }
+        public void AddItemToCart(int cartId, int itemId)
+        {
+            _cartRepository.AddItemToCart(cartId, itemId);
+        }
         public void UpdateCart(int id, bool delivery)
         {
             Cart cartInfo = _cartRepository.GetCartById(id);
@@ -60,8 +64,15 @@ namespace Application.Services
 
         public void DeleteCart(int id)
         {
-            _cartRepository.DeleteCart(id);
+            var cart =_cartRepository.GetCartById(id);
+            
+            if (cart != null)
+            { 
+                var idClient = cart.ClientId;
+                _clientRepository.DeleteClientCart(idClient);
 
+                _cartRepository.DeleteCart(id);
+            }
         }
     }
 }

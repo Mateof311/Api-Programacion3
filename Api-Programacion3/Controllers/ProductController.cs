@@ -38,14 +38,14 @@ namespace Api_Programacion3.Controllers
         public IActionResult UpdateProduct(int id,[FromBody] ProductDto productDto)
         {
             _productService.UpdateProduct(id, productDto);
-            return Ok();
+            return Ok("Producto actualizado");
         }
 
         [HttpDelete("[action]")]
         public IActionResult DeleteProduct(int id)
         {
             _productService.DeletePoduct(id);
-            return Ok();
+            return Ok("Producto eliminado");
         }
     }
 }

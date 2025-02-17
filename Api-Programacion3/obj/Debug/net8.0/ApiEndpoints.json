@@ -80,6 +80,27 @@
   },
   {
     "ContainingType": "Api_Programacion3.Controllers.CartController",
+    "Method": "AddItemToCart",
+    "RelativePath": "api/Cart/{cartId}/add-item/{itemId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "itemId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.CartController",
     "Method": "AddCart",
     "RelativePath": "api/Cart/AddCart",
     "HttpMethod": "POST",
@@ -430,26 +451,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api_Programacion3.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Api_Programacion3.WeatherForecast, Api-Programacion3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

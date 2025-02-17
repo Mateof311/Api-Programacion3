@@ -38,14 +38,14 @@ namespace Api_Programacion3.Controllers
         public IActionResult UpdateAdmin(int id,[FromBody] AdminDto adminDto)
         {
             _adminService.UpdateAdmin(id, adminDto);
-            return Ok();
+            return Ok("Admin actualizado");
         }
 
         [HttpDelete("[action]")]
         public IActionResult DeleteAdmin(int id)
         { 
             _adminService.DeleteAdmin(id);
-            return Ok();
+            return Ok("Admin eliminado");
         }
     }
 }

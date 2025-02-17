@@ -18,7 +18,16 @@ namespace Infrastructure.Data
         public DbSet<Item> Items { get; set; }
         public DbSet<Cart> Carts { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Cart>()
+                .HasMany(c => c.Products)
+                .WithOne(i => i.Cart)
+                .HasForeignKey(i => i.CartId)
+                .OnDelete(DeleteBehavior.Cascade);
 
+            base.OnModelCreating(modelBuilder);
+        }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, bool isTestingEnvironment = false) : base(options)
         {

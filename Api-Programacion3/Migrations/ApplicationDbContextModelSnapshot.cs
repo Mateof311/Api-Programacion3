@@ -194,9 +194,12 @@ namespace Api_Programacion3.Migrations
 
             modelBuilder.Entity("Domain.Entities.Item", b =>
                 {
-                    b.HasOne("Domain.Entities.Cart", null)
+                    b.HasOne("Domain.Entities.Cart", "Cart")
                         .WithMany("Products")
-                        .HasForeignKey("CartId");
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Cart");
                 });
 
             modelBuilder.Entity("Domain.Entities.Cart", b =>

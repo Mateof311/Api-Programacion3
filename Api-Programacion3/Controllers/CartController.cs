@@ -33,17 +33,30 @@ namespace Api_Programacion3.Controllers
         {
             return Ok(_cartService.AddCart(cartDto));
         }
+        [HttpPost("{cartId}/add-item/{itemId}")]
+        public IActionResult AddItemToCart(int cartId, int itemId)
+        {
+            try
+            {
+                _cartService.AddItemToCart(cartId, itemId);
+                return Ok("Item agregado al carrito");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
         [HttpPut("[action]")]
         public IActionResult UpdateCart(int id, bool delivery)
         {
             _cartService.UpdateCart(id, delivery);
-            return Ok();
+            return Ok("Carrito actualizado");
         }
         [HttpDelete("[action]")]
         public IActionResult DeleteCart(int id)
         {
             _cartService.DeleteCart(id);
-            return Ok();
+            return Ok("Cariito eliminado");
         }
     }
 }

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace Domain.Entities
 {
@@ -18,6 +19,9 @@ namespace Domain.Entities
         public decimal UnitPrice { get; set; }
         public int Quantity { get; set; }
         public decimal Total => UnitPrice * Quantity;
+        public int? CartId { get; set; }
+        [JsonIgnore]
+        public Cart? Cart { get; set; }
 
     }
 }

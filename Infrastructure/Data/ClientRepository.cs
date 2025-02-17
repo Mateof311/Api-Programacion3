@@ -65,6 +65,17 @@ namespace Infrastructure.Data
             }
         }
 
+        public void DeleteClientCart(int id)
+        {
+            var client = _dbContext.Clients.FirstOrDefault(x => x.Id == id);
+
+            if (client != null)
+            {
+                client.CartId = 0;
+                _dbContext.SaveChanges();
+            }
+        }
+
         public void DeleteClient(int id)
         {
             var client = _dbContext.Clients.FirstOrDefault(x => x.Id == id);

@@ -39,13 +39,13 @@ namespace Api_Programacion3.Controllers
         public IActionResult UpdateClient(int id, [FromBody] ClientDto clientDto)
         {
             _clientService.UpdateClient(id, clientDto);
-            return Ok();
+            return Ok("Cliente actualizado");
         }
         [HttpDelete("[action]")]
         public IActionResult DeleteClient(int id)
         {
             _clientService.DeleteClient(id);
-            return Ok();
+            return Ok("Cliente eliminado");
         }
     }
 }

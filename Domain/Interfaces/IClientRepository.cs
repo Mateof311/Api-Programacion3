@@ -15,6 +15,7 @@ namespace Domain.Interfaces
         public int AddClient(Client client);
         public void AddCartToClient(int id, Cart cart);
         public void UpdateClient(int id, Client client);
+        public void DeleteClientCart(int id);
         public void DeleteClient(int id);
     }
 }

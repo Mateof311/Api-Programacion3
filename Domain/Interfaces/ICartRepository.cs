@@ -13,6 +13,7 @@ namespace Domain.Interfaces
         public Cart? GetCartByClientId(int id);
         public List<Cart> GetCarts();
         public int AddCart(Cart cart);
+        public void AddItemToCart(int cartId, int itemId);
         public void UpdateCart(int id, Cart cart);
         public void DeleteCart(int id);
     }

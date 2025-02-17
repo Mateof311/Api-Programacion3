@@ -27,19 +27,19 @@ namespace Api_Programacion3.Controllers
         public IActionResult AddItem(ItemDto itemDto)
         {
             return Ok(_itemService.AddItem(itemDto));
-        }
+        }     
         [HttpPut("[action]")]
         public IActionResult UpdateItem(int id, int quantity)
         {
             _itemService.UpdateItem(id, quantity);
-            return Ok();
+            return Ok("Item actualizado");
 
         }
         [HttpDelete("[action]")]
         public IActionResult DeleteItem(int id)
         {
             _itemService.DeleteItem(id);
-            return Ok();
+            return Ok("Item eliminado");
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,18 +16,19 @@ namespace Infrastructure.Data
         public CartRepository(ApplicationDbContext dbContext)
         { 
             _dbContext = dbContext;
+            
         }
         public Cart? GetCartById(int id)
         {
-            return _dbContext.Carts.FirstOrDefault(u => u.Id == id);
+            return _dbContext.Carts.Include(c => c.Products).FirstOrDefault(u => u.Id == id);
         }
         public Cart? GetCartByClientId(int id)
         {
-            return _dbContext.Carts.FirstOrDefault(u => u.ClientId == id);
+            return _dbContext.Carts.Include(c => c.Products).FirstOrDefault(u => u.ClientId == id);
         }
         public List<Cart> GetCarts()
         {
-            return _dbContext.Carts.ToList();
+            return _dbContext.Carts.Include(c => c.Products).ToList();
         }
         public int AddCart(Cart cart)
         {
@@ -36,6 +38,27 @@ namespace Infrastructure.Data
             return cart.Id;
 
         }
+        public void AddItemToCart(int cartId, int itemId)
+        {
+            var cart = _dbContext.Carts
+                .Include(c => c.Products)
+                .FirstOrDefault(c => c.Id == cartId);
+
+            var item = _dbContext.Items.FirstOrDefault(i => i.Id == itemId);
+
+            if (cart == null || item == null)
+                throw new Exception("Carro o Item incorrectos");
+
+            if (cart.Products.Any(p => p.Id == itemId))
+                throw new Exception("El item ya se encuentra en el carrito");
+
+            
+            item.CartId = cartId;
+            _dbContext.Update(item);
+
+            _dbContext.SaveChanges();
+        }
+
         public void UpdateCart(int id, Cart cart)
         {
             var existingCart = _dbContext.Carts.FirstOrDefault(u => u.Id == id);
@@ -50,6 +73,7 @@ namespace Infrastructure.Data
         public void DeleteCart(int id)
         {
             var cart = _dbContext.Carts.FirstOrDefault(x => x.Id == id);
+            
 
             if (cart != null)
             {

@@ -14,10 +14,12 @@ namespace Application.Services
     {
         private readonly IItemRepository _itemRepository;
         private readonly IProductRepository _productRepository;
-        public ItemService(IItemRepository itemRepository,IProductRepository productRepository )
+        private readonly ICartRepository _cartRepository;
+        public ItemService(IItemRepository itemRepository,IProductRepository productRepository, ICartRepository cartRepository )
         {
             _itemRepository = itemRepository;
             _productRepository = productRepository;
+            _cartRepository = cartRepository;
         }
 
         public Item? GetItemById(int id)
@@ -31,6 +33,7 @@ namespace Application.Services
         public int AddItem(ItemDto itemDto)
         {
             Product productInfo = _productRepository.GetProductById(itemDto.ProductId);
+
             var newItem = new Item()
             {
                 ProductId = itemDto.ProductId,

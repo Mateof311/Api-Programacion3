@@ -15,6 +15,7 @@ namespace Application.Interfaces
         public Cart? GetCartByClientId(int id);
         public List<Cart> GetCarts();
         public int AddCart(CartDto cartDto);
+        public void AddItemToCart(int cartId, int itemId);
         public void UpdateCart(int id, bool delivery);
         public void DeleteCart(int id);
     }
