@@ -132,6 +132,54 @@
         }
       }
     },
+    "/api/Authentication/authenticate": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Cart/GetCartById": {
       "get": {
         "tags": [
@@ -786,6 +834,20 @@
         },
         "additionalProperties": false
       },
+      "CredentialsRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ItemDto": {
         "required": [
           "productId",
@@ -832,6 +894,18 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Api-Programacion3BearerAuth": {
+        "type": "http",
+        "description": "Ingresar aqui el token.",
+        "scheme": "Bearer"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Api-Programacion3BearerAuth": [ ]
+    }
+  ]
 }

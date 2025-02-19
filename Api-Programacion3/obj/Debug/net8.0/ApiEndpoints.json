@@ -79,6 +79,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Api_Programacion3.Controllers.AuthenticationController",
+    "Method": "Authenticate",
+    "RelativePath": "api/Authentication/authenticate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "credentials",
+        "Type": "Application.Models.Dtos.CredentialsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Api_Programacion3.Controllers.CartController",
     "Method": "AddItemToCart",
     "RelativePath": "api/Cart/{cartId}/add-item/{itemId}",

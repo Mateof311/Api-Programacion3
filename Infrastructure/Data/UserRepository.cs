@@ -22,7 +22,7 @@ namespace Infrastructure.Data
         }
         public User? GetUserByEmail(string email)
         {
-            return _dbContext.Users.SingleOrDefault(x => x.Email == email);
+            return _dbContext.Users.FirstOrDefault(x => x.Email == email);
         }
 
     }

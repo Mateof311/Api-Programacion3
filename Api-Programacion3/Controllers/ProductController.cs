@@ -1,10 +1,13 @@
 ﻿using Application.Interfaces;
 using Application.Models.Dtos;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Api_Programacion3.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
@@ -16,6 +19,7 @@ namespace Api_Programacion3.Controllers
             _productService = productService;
         }
 
+        [AllowAnonymous]
         [HttpGet("[action]")]
         public IActionResult GetAll()
         {
@@ -25,27 +29,56 @@ namespace Api_Programacion3.Controllers
         [HttpGet("[action]")]
         public IActionResult GetById(int id)
         {
-           return Ok( _productService.GetProductById(id));
+
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "Client" || userRole == "Admin")
+            {
+                return Ok( _productService.GetProductById(id));
+            }
+            return Ok("Rol de usuario no calificado");
+            
         }
 
         [HttpPost("[action]")]
         public IActionResult AddProduct([FromBody] ProductDto productDto)
         {
-            return Ok(_productService.AddProduct(productDto));
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "Admin")
+            {
+                return Ok(_productService.AddProduct(productDto));
+            }
+            return Ok("Rol de usuario no calificado");
+            
         }
 
         [HttpPut("[action]")]
         public IActionResult UpdateProduct(int id,[FromBody] ProductDto productDto)
         {
-            _productService.UpdateProduct(id, productDto);
-            return Ok("Producto actualizado");
+
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "Admin")
+            {
+                _productService.UpdateProduct(id, productDto);
+                return Ok("Producto actualizado");
+            }
+            return Ok("Rol de usuario no calificado");
         }
 
         [HttpDelete("[action]")]
         public IActionResult DeleteProduct(int id)
         {
-            _productService.DeletePoduct(id);
-            return Ok("Producto eliminado");
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "Admin")
+            {
+                _productService.DeletePoduct(id);
+                return Ok("Producto eliminado");
+            }
+            return Ok("Rol de usuario no calificado");
+            
         }
     }
 }

@@ -1,9 +1,13 @@
 ﻿using Application.Interfaces;
 using Application.Models.Dtos;
+using Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Api_Programacion3.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CartController : ControllerBase
@@ -16,32 +20,64 @@ namespace Api_Programacion3.Controllers
         [HttpGet("[action]")]
         public IActionResult GetCartById(int id)
         {
-            //validar rol con las claims del token
-            //int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value);
-            return Ok(_cartService.GetCartById(id));
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "SysAdmin" || userRole == "Client")
+            {
+                return Ok(_cartService.GetCartById(id));
+            }
+            return Ok("Rol de usuario no calificado");
+            
         }
         [HttpGet("[action]")]
         public IActionResult GetCartByClientId(int id)
         {
-            return Ok(_cartService.GetCartByClientId(id));
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "SysAdmin" || userRole == "Admin")
+            {
+                return Ok(_cartService.GetCartByClientId(id));
+            }
+            return Ok("Rol de usuario no calificado");
         }
         [HttpGet("[action]")]
         public IActionResult GetCarts()
         {
-            return Ok(_cartService.GetCarts());
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "Admin")
+            {
+                return Ok(_cartService.GetCarts());
+            }
+            return Ok("Rol de usuario no calificado");
+            
         }
         [HttpPost("[action]")]
         public IActionResult AddCart(CartDto cartDto)
         {
-            return Ok(_cartService.AddCart(cartDto));
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "Client")
+            {
+                return Ok(_cartService.AddCart(cartDto));
+            }
+            return Ok("Rol de usuario no calificado");
+            
         }
         [HttpPost("{cartId}/add-item/{itemId}")]
         public IActionResult AddItemToCart(int cartId, int itemId)
         {
             try
             {
-                _cartService.AddItemToCart(cartId, itemId);
+                var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+                if (userRole == "Client")
+                {
+                    _cartService.AddItemToCart(cartId, itemId);
                 return Ok("Item agregado al carrito");
+                }
+                return Ok("Rol de usuario no calificado");
+                
             }
             catch (Exception ex)
             {
@@ -51,14 +87,27 @@ namespace Api_Programacion3.Controllers
         [HttpPut("[action]")]
         public IActionResult UpdateCart(int id, bool delivery)
         {
-            _cartService.UpdateCart(id, delivery);
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "Client")
+            {
+                _cartService.UpdateCart(id, delivery);
             return Ok("Carrito actualizado");
+            }
+            return Ok("Rol de usuario no calificado");
         }
         [HttpDelete("[action]")]
         public IActionResult DeleteCart(int id)
         {
-            _cartService.DeleteCart(id);
-            return Ok("Cariito eliminado");
+            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (userRole == "Client")
+            {
+                _cartService.DeleteCart(id);
+                return Ok("Cariito eliminado");
+            }
+            return Ok("Rol de usuario no calificado");
+            
         }
     }
 }
