@@ -142,3 +142,12 @@ C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\obj\Debug\net8.0\staticwebassets\msbuild.Api-Programacion3.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\mateo\OneDrive\Escritorio\TUP\Prog3\Api-Programacion3\Api-Programacion3\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

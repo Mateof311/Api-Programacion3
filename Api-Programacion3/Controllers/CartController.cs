@@ -16,6 +16,8 @@ namespace Api_Programacion3.Controllers
         [HttpGet("[action]")]
         public IActionResult GetCartById(int id)
         {
+            //validar rol con las claims del token
+            //int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value);
             return Ok(_cartService.GetCartById(id));
         }
         [HttpGet("[action]")]

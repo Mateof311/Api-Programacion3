@@ -11,6 +11,7 @@ namespace Infrastructure.Data
     public class ApplicationDbContext : DbContext
     {
         private readonly bool isTestingEnvironment;
+        public DbSet<User> Users { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<SysAdmin> SysAdmins { get; set; }
@@ -20,6 +21,8 @@ namespace Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>().HasDiscriminator(u => u.UserRol);
+
             modelBuilder.Entity<Cart>()
                 .HasMany(c => c.Products)
                 .WithOne(i => i.Cart)
