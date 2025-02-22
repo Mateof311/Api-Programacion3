@@ -32,16 +32,19 @@ namespace Application.Services
         }
         public int AddItem(ItemDto itemDto)
         {
-            Product productInfo = _productRepository.GetProductById(itemDto.ProductId);
-
-            var newItem = new Item()
+            Product? productInfo = _productRepository.GetProductById(itemDto.ProductId);
+            if (productInfo is not null)
             {
-                ProductId = itemDto.ProductId,
-                ProductName = productInfo.Name,
-                UnitPrice = productInfo.Price,
-                Quantity = itemDto.Quantity,
-            };
-            return _itemRepository.AddItem(newItem);
+                var newItem = new Item()
+                {
+                    ProductId = itemDto.ProductId,
+                    ProductName = productInfo.Name,
+                    UnitPrice = productInfo.Price,
+                    Quantity = itemDto.Quantity,
+                };
+                return _itemRepository.AddItem(newItem);
+            }
+            return -1;
         }
         public void UpdateItem(int id, int quantity)
         {

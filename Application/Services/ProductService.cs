@@ -13,10 +13,12 @@ namespace Application.Services
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
+        private readonly IItemRepository _itemRepository;
 
-        public ProductService(IProductRepository productRepository)
+        public ProductService(IProductRepository productRepository, IItemRepository itemRepository)
         {
             _productRepository = productRepository;
+            _itemRepository = itemRepository;
         }
         public Product? GetProductById(int id)
         {
@@ -51,6 +53,11 @@ namespace Application.Services
         }
         public void DeletePoduct(int id)
         {
+            var itemsToRemove = _itemRepository.GetItemsByProductId(id);
+            if (itemsToRemove.Count != 0)
+            {
+                _itemRepository.RemoveItems(itemsToRemove);
+            }
             _productRepository.DeleteProduct(id);
         }
 

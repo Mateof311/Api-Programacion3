@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,10 @@ namespace Infrastructure.Data
         {
             return _dbContext.Items.ToList();
         }
+        public List<Item> GetItemsByProductId(int productId)
+        {
+            return _dbContext.Items.Where(i => i.ProductId == productId).ToList();
+        }
         public int AddItem(Item item)
         {
             _dbContext.Items.Add(item);
@@ -42,6 +47,11 @@ namespace Infrastructure.Data
 
                 _dbContext.SaveChanges();
             }
+        }
+        public void RemoveItems(List<Item> items)
+        {
+            _dbContext.Items.RemoveRange(items);
+            _dbContext.SaveChanges();
         }
         public void DeleteItem(int id)
         {
