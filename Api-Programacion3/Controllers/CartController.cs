@@ -17,7 +17,7 @@ namespace Api_Programacion3.Controllers
         {
             _cartService = cartService;
         }
-        [HttpGet("[action]")]
+        [HttpGet("[action]/{id}")]
         public IActionResult GetCartById(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -29,7 +29,7 @@ namespace Api_Programacion3.Controllers
             return Ok("Rol de usuario no calificado");
             
         }
-        [HttpGet("[action]")]
+        [HttpGet("[action]/{id}")]
         public IActionResult GetCartByClientId(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -64,7 +64,7 @@ namespace Api_Programacion3.Controllers
             return Ok("Rol de usuario no calificado");
             
         }
-        [HttpPost("{cartId}/add-item/{itemId}")]
+        [HttpPost("to/{cartId}/add-item/{itemId}")]
         public IActionResult AddItemToCart(int cartId, int itemId)
         {
             try
@@ -84,7 +84,7 @@ namespace Api_Programacion3.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        [HttpPut("[action]")]
+        [HttpPut("[action]/{id}")]
         public IActionResult UpdateCart(int id, bool delivery)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -96,7 +96,7 @@ namespace Api_Programacion3.Controllers
             }
             return Ok("Rol de usuario no calificado");
         }
-        [HttpDelete("[action]")]
+        [HttpDelete("[action]/{id}")]
         public IActionResult DeleteCart(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;

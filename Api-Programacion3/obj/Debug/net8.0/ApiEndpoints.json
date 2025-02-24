@@ -18,7 +18,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.AdminController",
     "Method": "DeleteAdmin",
-    "RelativePath": "api/Admin/DeleteAdmin",
+    "RelativePath": "api/Admin/DeleteAdmin/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -26,7 +26,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -34,7 +34,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.AdminController",
     "Method": "GetAdmin",
-    "RelativePath": "api/Admin/GetAdmin",
+    "RelativePath": "api/Admin/GetAdmin/{name}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,7 +42,7 @@
       {
         "Name": "name",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -60,7 +60,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.AdminController",
     "Method": "UpdateAdmin",
-    "RelativePath": "api/Admin/UpdateAdmin",
+    "RelativePath": "api/Admin/UpdateAdmin/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -68,7 +68,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "adminDto",
@@ -106,8 +106,82 @@
   },
   {
     "ContainingType": "Api_Programacion3.Controllers.CartController",
+    "Method": "AddCart",
+    "RelativePath": "api/Cart/AddCart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartDto",
+        "Type": "Application.Models.Dtos.CartDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.CartController",
+    "Method": "DeleteCart",
+    "RelativePath": "api/Cart/DeleteCart/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.CartController",
+    "Method": "GetCartByClientId",
+    "RelativePath": "api/Cart/GetCartByClientId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.CartController",
+    "Method": "GetCartById",
+    "RelativePath": "api/Cart/GetCartById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.CartController",
+    "Method": "GetCarts",
+    "RelativePath": "api/Cart/GetCarts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api_Programacion3.Controllers.CartController",
     "Method": "AddItemToCart",
-    "RelativePath": "api/Cart/{cartId}/add-item/{itemId}",
+    "RelativePath": "api/Cart/to/{cartId}/add-item/{itemId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -127,82 +201,8 @@
   },
   {
     "ContainingType": "Api_Programacion3.Controllers.CartController",
-    "Method": "AddCart",
-    "RelativePath": "api/Cart/AddCart",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cartDto",
-        "Type": "Application.Models.Dtos.CartDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api_Programacion3.Controllers.CartController",
-    "Method": "DeleteCart",
-    "RelativePath": "api/Cart/DeleteCart",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api_Programacion3.Controllers.CartController",
-    "Method": "GetCartByClientId",
-    "RelativePath": "api/Cart/GetCartByClientId",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api_Programacion3.Controllers.CartController",
-    "Method": "GetCartById",
-    "RelativePath": "api/Cart/GetCartById",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api_Programacion3.Controllers.CartController",
-    "Method": "GetCarts",
-    "RelativePath": "api/Cart/GetCarts",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Api_Programacion3.Controllers.CartController",
     "Method": "UpdateCart",
-    "RelativePath": "api/Cart/UpdateCart",
+    "RelativePath": "api/Cart/UpdateCart/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -210,7 +210,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "delivery",
@@ -239,7 +239,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ClientController",
     "Method": "DeleteClient",
-    "RelativePath": "api/Client/DeleteClient",
+    "RelativePath": "api/Client/DeleteClient/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -247,7 +247,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -265,7 +265,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ClientController",
     "Method": "GetById",
-    "RelativePath": "api/Client/GetById",
+    "RelativePath": "api/Client/GetById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -273,7 +273,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -302,7 +302,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ClientController",
     "Method": "UpdateClient",
-    "RelativePath": "api/Client/UpdateClient",
+    "RelativePath": "api/Client/UpdateClient/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -310,7 +310,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "clientDto",
@@ -339,7 +339,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ItemController",
     "Method": "DeleteItem",
-    "RelativePath": "api/Item/DeleteItem",
+    "RelativePath": "api/Item/DeleteItem/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -347,7 +347,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -365,7 +365,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ItemController",
     "Method": "GetItemById",
-    "RelativePath": "api/Item/GetItemById",
+    "RelativePath": "api/Item/GetItemById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -373,7 +373,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -381,7 +381,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ItemController",
     "Method": "UpdateItem",
-    "RelativePath": "api/Item/UpdateItem",
+    "RelativePath": "api/Item/UpdateItem/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -389,7 +389,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "quantity",
@@ -418,7 +418,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ProductController",
     "Method": "DeleteProduct",
-    "RelativePath": "api/Product/DeleteProduct",
+    "RelativePath": "api/Product/DeleteProduct/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -426,7 +426,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -444,7 +444,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ProductController",
     "Method": "GetById",
-    "RelativePath": "api/Product/GetById",
+    "RelativePath": "api/Product/GetById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -452,7 +452,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -460,7 +460,7 @@
   {
     "ContainingType": "Api_Programacion3.Controllers.ProductController",
     "Method": "UpdateProduct",
-    "RelativePath": "api/Product/UpdateProduct",
+    "RelativePath": "api/Product/UpdateProduct/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -468,7 +468,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "productDto",

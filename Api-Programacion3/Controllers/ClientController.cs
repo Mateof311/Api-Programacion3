@@ -30,7 +30,7 @@ namespace Api_Programacion3.Controllers
             }
             return Ok("Rol de usuario no calificado");
         }
-        [HttpGet("[action]")]
+        [HttpGet("[action]/{id}")]
         public IActionResult GetById(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -58,7 +58,7 @@ namespace Api_Programacion3.Controllers
         {
             return Ok(_clientService.AddClient(clientDto));
         }
-        [HttpPut("[action]")]
+        [HttpPut("[action]/{id}")]
         public IActionResult UpdateClient(int id, [FromBody] ClientDto clientDto)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -70,7 +70,7 @@ namespace Api_Programacion3.Controllers
             }
             return Ok("Rol de usuario no calificado");
         }
-        [HttpDelete("[action]")]
+        [HttpDelete("[action]/{id}")]
         public IActionResult DeleteClient(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;

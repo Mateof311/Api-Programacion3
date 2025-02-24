@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|solutionrelative:api-programacion3\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7097CA7D-9AFD-470A-95E7-8E0B2540811B}|Api-Programacion3\\Api-Programacion3.csproj|c:\\users\\mateo\\onedrive\\escritorio\\tup\\prog3\\api-programacion3\\api-programacion3\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -168,23 +168,21 @@
               "RelativeDocumentMoniker": "Api-Programacion3\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Api-Programacion3\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:42:10.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T14:42:10.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "Api-Programacion3\\Controllers\\CartController.cs",
               "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\CartController.cs",
               "RelativeToolTip": "Api-Programacion3\\Controllers\\CartController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAcwGoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAGIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:34:43.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T14:34:43.884Z"
             },
             {
               "$type": "Document",
@@ -194,23 +192,21 @@
               "RelativeDocumentMoniker": "Api-Programacion3\\Controllers\\ClientController.cs",
               "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\ClientController.cs",
               "RelativeToolTip": "Api-Programacion3\\Controllers\\ClientController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAswFIAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:28:36.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T14:28:36.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ItemController.cs",
               "DocumentMoniker": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\ItemController.cs",
               "RelativeDocumentMoniker": "Api-Programacion3\\Controllers\\ItemController.cs",
               "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\ItemController.cs",
               "RelativeToolTip": "Api-Programacion3\\Controllers\\ItemController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAqwC8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T14:12:45.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T14:12:45.266Z"
             },
             {
               "$type": "Document",
@@ -220,7 +216,7 @@
               "RelativeDocumentMoniker": "Api-Programacion3\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\mateo\\OneDrive\\Escritorio\\TUP\\Prog3\\Api-Programacion3\\Api-Programacion3\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Api-Programacion3\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAowEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T14:11:01.482Z",
               "EditorCaption": ""

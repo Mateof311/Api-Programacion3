@@ -17,7 +17,7 @@ namespace Api_Programacion3.Controllers
         {
             _itemService = itemService;
         }
-        [HttpGet("[action]")]
+        [HttpGet("[action]/{id}")]
         public IActionResult GetItemById(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -52,7 +52,7 @@ namespace Api_Programacion3.Controllers
 
            
         }     
-        [HttpPut("[action]")]
+        [HttpPut("[action]/{id}")]
         public IActionResult UpdateItem(int id, int quantity)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -64,7 +64,7 @@ namespace Api_Programacion3.Controllers
             }
             return Ok("Rol de usuario no calificado");
         }
-        [HttpDelete("[action]")]
+        [HttpDelete("[action]/{id}")]
         public IActionResult DeleteItem(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;

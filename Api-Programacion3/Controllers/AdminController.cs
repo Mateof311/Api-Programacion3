@@ -32,7 +32,7 @@ namespace Api_Programacion3.Controllers
             return Ok("Rol de usuario no calificado");
         }
 
-        [HttpGet("[action]")]
+        [HttpGet("[action]/{name}")]
         public IActionResult GetAdmin(string name)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -56,7 +56,7 @@ namespace Api_Programacion3.Controllers
             return Ok("Rol de usuario no calificado");
         }
 
-        [HttpPut("[action]")]
+        [HttpPut("[action]/{id}")]
         public IActionResult UpdateAdmin(int id,[FromBody] AdminDto adminDto)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
@@ -69,7 +69,7 @@ namespace Api_Programacion3.Controllers
             return Ok("Rol de usuario no calificado");
         }
 
-        [HttpDelete("[action]")]
+        [HttpDelete("[action]/{id}")]
         public IActionResult DeleteAdmin(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;

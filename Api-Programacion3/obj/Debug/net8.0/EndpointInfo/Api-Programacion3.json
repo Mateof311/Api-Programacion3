@@ -17,7 +17,7 @@
         }
       }
     },
-    "/api/Admin/GetAdmin": {
+    "/api/Admin/GetAdmin/{name}": {
       "get": {
         "tags": [
           "Admin"
@@ -25,7 +25,8 @@
         "parameters": [
           {
             "name": "name",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -69,7 +70,7 @@
         }
       }
     },
-    "/api/Admin/UpdateAdmin": {
+    "/api/Admin/UpdateAdmin/{id}": {
       "put": {
         "tags": [
           "Admin"
@@ -77,7 +78,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -110,7 +112,7 @@
         }
       }
     },
-    "/api/Admin/DeleteAdmin": {
+    "/api/Admin/DeleteAdmin/{id}": {
       "delete": {
         "tags": [
           "Admin"
@@ -118,7 +120,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -180,7 +183,7 @@
         }
       }
     },
-    "/api/Cart/GetCartById": {
+    "/api/Cart/GetCartById/{id}": {
       "get": {
         "tags": [
           "Cart"
@@ -188,7 +191,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -202,7 +206,7 @@
         }
       }
     },
-    "/api/Cart/GetCartByClientId": {
+    "/api/Cart/GetCartByClientId/{id}": {
       "get": {
         "tags": [
           "Cart"
@@ -210,7 +214,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -267,7 +272,7 @@
         }
       }
     },
-    "/api/Cart/{cartId}/add-item/{itemId}": {
+    "/api/Cart/to/{cartId}/add-item/{itemId}": {
       "post": {
         "tags": [
           "Cart"
@@ -299,7 +304,7 @@
         }
       }
     },
-    "/api/Cart/UpdateCart": {
+    "/api/Cart/UpdateCart/{id}": {
       "put": {
         "tags": [
           "Cart"
@@ -307,7 +312,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -328,7 +334,7 @@
         }
       }
     },
-    "/api/Cart/DeleteCart": {
+    "/api/Cart/DeleteCart/{id}": {
       "delete": {
         "tags": [
           "Cart"
@@ -336,7 +342,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -362,7 +369,7 @@
         }
       }
     },
-    "/api/Client/GetById": {
+    "/api/Client/GetById/{id}": {
       "get": {
         "tags": [
           "Client"
@@ -370,7 +377,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -443,7 +451,7 @@
         }
       }
     },
-    "/api/Client/UpdateClient": {
+    "/api/Client/UpdateClient/{id}": {
       "put": {
         "tags": [
           "Client"
@@ -451,7 +459,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -484,7 +493,7 @@
         }
       }
     },
-    "/api/Client/DeleteClient": {
+    "/api/Client/DeleteClient/{id}": {
       "delete": {
         "tags": [
           "Client"
@@ -492,7 +501,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -506,7 +516,7 @@
         }
       }
     },
-    "/api/Item/GetItemById": {
+    "/api/Item/GetItemById/{id}": {
       "get": {
         "tags": [
           "Item"
@@ -514,7 +524,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -571,7 +582,7 @@
         }
       }
     },
-    "/api/Item/UpdateItem": {
+    "/api/Item/UpdateItem/{id}": {
       "put": {
         "tags": [
           "Item"
@@ -579,7 +590,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -601,7 +613,7 @@
         }
       }
     },
-    "/api/Item/DeleteItem": {
+    "/api/Item/DeleteItem/{id}": {
       "delete": {
         "tags": [
           "Item"
@@ -609,7 +621,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -635,7 +648,7 @@
         }
       }
     },
-    "/api/Product/GetById": {
+    "/api/Product/GetById/{id}": {
       "get": {
         "tags": [
           "Product"
@@ -643,7 +656,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -688,7 +702,7 @@
         }
       }
     },
-    "/api/Product/UpdateProduct": {
+    "/api/Product/UpdateProduct/{id}": {
       "put": {
         "tags": [
           "Product"
@@ -696,7 +710,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -729,7 +744,7 @@
         }
       }
     },
-    "/api/Product/DeleteProduct": {
+    "/api/Product/DeleteProduct/{id}": {
       "delete": {
         "tags": [
           "Product"
@@ -737,7 +752,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"

@@ -26,7 +26,7 @@ namespace Api_Programacion3.Controllers
             return Ok(_productService.GetProducts());
         }
 
-        [HttpGet("[action]")]
+        [HttpGet("[action]/{id}")]
         public IActionResult GetById(int id)
         {
 
@@ -53,7 +53,7 @@ namespace Api_Programacion3.Controllers
             
         }
 
-        [HttpPut("[action]")]
+        [HttpPut("[action]/{id}")]
         public IActionResult UpdateProduct(int id,[FromBody] ProductDto productDto)
         {
 
@@ -67,7 +67,7 @@ namespace Api_Programacion3.Controllers
             return Ok("Rol de usuario no calificado");
         }
 
-        [HttpDelete("[action]")]
+        [HttpDelete("[action]/{id}")]
         public IActionResult DeleteProduct(int id)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
