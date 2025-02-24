@@ -16,7 +16,16 @@ namespace Domain.Entities
         public int ClientId { get; set; }
         public bool Delivery { get; set; }
         public List<Item>? Products { get; set; } = new List<Item>();
-        public decimal TotalAmount => Products?.Sum(d => d.Total) ?? 0;
+        private const decimal Delivery_Pct = 0.10m;
+
+        public decimal TotalAmount
+        {
+            get
+            {
+                decimal total = Products?.Sum(d => d.Total) ?? 0;
+                return Delivery ? total + (total * Delivery_Pct) : total;
+            }
+        }
 
     }
 }
