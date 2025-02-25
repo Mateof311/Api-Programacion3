@@ -85,7 +85,7 @@ namespace Api_Programacion3.Controllers
             }
         }
         [HttpPut("[action]/{id}")]
-        public IActionResult UpdateCart(int id, bool delivery)
+        public IActionResult UpdateCart(int id, [FromBody] bool delivery)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
 

@@ -48,16 +48,19 @@ namespace Application.Services
         }
         public void UpdateItem(int id, int quantity)
         {
-            Product productInfo = _productRepository.GetProductById(id);
-            var newItem = new Item()
+            Item? existingItem = _itemRepository.GetItemById(id);
+            if (existingItem is not null)
             {
-                ProductId = productInfo.Id,
-                ProductName = productInfo.Name,
-                UnitPrice = productInfo.Price,
-                Quantity = quantity,
-            };
-
-            _itemRepository.UpdateItem(id, newItem);
+                var newItem = new Item()
+                {
+                    ProductId = existingItem.ProductId,
+                    ProductName = existingItem.ProductName,
+                    UnitPrice = existingItem.UnitPrice,
+                    Quantity = quantity,
+                    CartId = existingItem.CartId,
+                };
+                _itemRepository.UpdateItem(id, newItem);
+            }
         }
 
         public void DeleteItem(int id)

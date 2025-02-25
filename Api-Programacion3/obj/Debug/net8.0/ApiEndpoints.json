@@ -215,7 +215,7 @@
       {
         "Name": "delivery",
         "Type": "System.Boolean",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -394,7 +394,7 @@
       {
         "Name": "quantity",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

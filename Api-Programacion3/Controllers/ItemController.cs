@@ -53,7 +53,7 @@ namespace Api_Programacion3.Controllers
            
         }     
         [HttpPut("[action]/{id}")]
-        public IActionResult UpdateItem(int id, int quantity)
+        public IActionResult UpdateItem(int id, [FromBody] int quantity)
         {
             var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
 
